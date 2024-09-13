@@ -111,16 +111,18 @@ nav ul button:hover{
 
 /* configura a posição da imagem */
 .header-block img{
-    width: 50% ;
+    width: 40% ;
     position: absolute;
-    right: 2%;
-    bottom: 2%;
+    right: 8%;
+    bottom: 7%;
+    transform: translateX(20px);
+    transition: transform 2.5s;
 }
 
 .header-block .text {
     position: absolute;
-    bottom: 30%;
-    left: 15%;
+    bottom: 40%;
+    left: 7%;
 }
 
 .header-block .text h2{
@@ -128,13 +130,34 @@ nav ul button:hover{
     margin-bottom: 20px;
     text-align: right;
     transform: translateX(-20px);
-    transition: transform 0.5s;
+    transition: transform 1.5s;
 }
 
 .header-block .text p{ 
-    max-width: 280px ;
+    max-width: 380px ;
     color: var(--darkblue);
     text-align: right;
     transform: translateX(-20px);
-    transition: transform 0.5s;
+    transition: transform 1.5s;
 }
+
+/* Catalog */
+
+section .catalog {
+    width: 100vw ;
+    padding: 100px;
+}
+
+section .filter-card {
+    width: 1000px;
+    height: 150px;
+    background-color: var(--gray);
+    border-radius: 8px;
+    margin: 0 auto;
+    display: flex;
+    flex: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
