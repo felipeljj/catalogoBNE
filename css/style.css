@@ -259,7 +259,7 @@ section .card-wrapper {
 }
 
 section .card-item {
-    height: 400px;
+    height: 500px;
     background-color: var(--gray);
     border-radius: 8px;
     display: flex;
@@ -273,7 +273,7 @@ section .card-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .card-item img{
@@ -307,6 +307,27 @@ section .card-item {
 .card-item button:hover{
     background: var(--lightblue);
     color: var(--darkblue);
+}
+
+.card-content .edit-btn,
+.card-content .delete-btn {
+    width: 45%; /* Ajusta o tamanho dos botões para caberem lado a lado */
+    padding: 8px;
+    font-size: 0.9em;
+    background-color: var(--darkblue);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.card-content .delete-btn {
+    background-color: #d9534f; /* Cor vermelha para o botão de remover */
+}
+
+.card-content .delete-btn:hover {
+    background-color: #c9302c; /* Cor mais escura no hover */
 }
 
 /* About */
@@ -508,3 +529,101 @@ footer {
       padding-left: 10%;
     }
 }
+
+    /* Estilos para o Modal */
+  .modal {
+    display: none; /* O modal começa oculto */
+    position: fixed;
+    z-index: 100; /* Coloca o modal acima de todos os outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8); /* Fundo preto semi-transparente */
+    justify-content: center; /* Centraliza o modal horizontalmente */
+    align-items: center; /* Centraliza o modal verticalmente */
+  }
+
+  /* Quando o modal tiver a classe 'show', ele aparecerá */
+  .modal.show {
+    display: flex;
+  }
+
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar destaque ao modal */
+    animation: fadeIn 0.5s; /* Animação para uma entrada mais suave */
+  }
+
+  /* Elementos modal */
+
+  .close {
+    color: var(--darkblue);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .close:hover {
+    color: var(--lightblue);
+  }
+
+  #serviceForm label {
+    display: block;
+    margin-top: 10px;
+  }
+
+  #serviceForm input[type="text"],
+  #serviceForm textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid var(--gray);
+    border-radius: 4px;
+  }
+
+  #serviceForm input[type="file"] {
+    margin-top: 5px;
+  }
+
+  #saveServiceBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--darkblue);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  #saveServiceBtn:hover {
+    background-color: var(--lightblue);
+  }
+
+  .add-service-btn {
+    background-color: var(--darkblue);
+    color: var(--white);
+    padding: 12px 24px;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+  .add-service-btn:hover {
+      background-color: var(--lightblue);
+      transform: scale(1.05);
+  }
+
+  .add-service-btn:active {
+      transform: scale(0.98);
+  }
+
